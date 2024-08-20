@@ -1,3 +1,5 @@
+![code coverage badge](https://github.com/mshortcodes/learn-cicd-starter/actions/workflows/ci.yml/badge.svg)
+
 <!-- adding a comment here  -->
 
 # learn-cicd-starter (Notely)
