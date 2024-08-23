@@ -21,9 +21,6 @@ jobs:
         with:
           go-version: "1.22"
 
-      - name: Install Goose
-        run: go install github.com/pressly/goose/v2/cmd/goose@latest
-
       - name: Build app
         run: scripts/buildprod.sh
 
@@ -40,6 +37,9 @@ jobs:
 
       - name: Build and push Docker image to registry
         run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-433303/notely-ar-repo/mshortcodes/notely:latest
+
+      - name: Install Goose
+        run: go install github.com/pressly/goose/v3/cmd/goose@latest
 
       - name: Run migration
         run: ./scripts/migrateup.sh
